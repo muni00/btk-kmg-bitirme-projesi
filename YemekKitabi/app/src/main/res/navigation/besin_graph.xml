@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/besin_graph"
+    app:startDestination="@id/besinListesiFregment">
+
+    <fragment
+        android:id="@+id/besinDetayFregment"
+        android:name="com.muazzeznihalbahadir.yemekkitabi.view.BesinDetayFragment"
+        android:label="BesinDetayFregment" >
+        <action
+            android:id="@+id/action_besinDetayFregment_to_besinListesiFregment"
+            app:destination="@id/besinListesiFregment" />
+        <argument
+            android:name="besinid"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/besinListesiFregment"
+        android:name="com.muazzeznihalbahadir.yemekkitabi.view.BesinListesiFragment"
+        android:label="BesinListesiFregment" >
+        <action
+            android:id="@+id/action_besinListesiFregment_to_besinDetayFregment"
+            app:destination="@id/besinDetayFregment" />
+    </fragment>
+</navigation>
